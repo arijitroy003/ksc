@@ -12,7 +12,7 @@
 import os
 import re
 import sys
-from optparse import OptionParser, SUPPRESS_HELP
+from optparse import OptionParser
 from utils import run, read_list
 from utils import read_total_list, get_release_name
 from utils import submit_stable, submit_notif
