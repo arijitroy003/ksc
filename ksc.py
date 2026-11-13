@@ -12,7 +12,7 @@
 import os
 import re
 import sys
-from optparse import OptionParser
+from optparse import OptionParser, SUPPRESS_HELP
 from utils import run, read_list
 from utils import read_total_list, get_release_name
 from utils import submit_stable, submit_notif
@@ -285,7 +285,7 @@ class Ksc(object):
 
         consent = query_user_bool(consent_string)
         if consent.lower() != 'y':
-            print("Cannot proceed without consent. Quitting.")
+            print("Cannot proceed without consent. Qutting.")
             sys.exit(1)
 
     def submit_get_release(self):
@@ -315,7 +315,7 @@ class Ksc(object):
             use_sys_release = query_user_bool(query)
 
             if not use_sys_release:
-                print("Unable to determine user option. Quitting.")
+                print("Unable to determine user option. Qutting.")
                 sys.exit(1)
 
         # Either system-determine RHEL release is not what user wishes to file
@@ -327,7 +327,7 @@ class Ksc(object):
             )
 
             if not release_name:
-                print("Unable to determine a valid RHEL release. Quitting.")
+                print("Unable to determine a valid RHEL release. Qutting.")
                 sys.exit(1)
 
             else:

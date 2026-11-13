@@ -22,7 +22,7 @@ setup(name='ksc',
           'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
           'Programming Language :: Python :: 3'
       ],
-      python_requires='>=3.9, <4',
+      python_requires='>=3.6, <4',
       install_requires=[
           'requests'
       ],
